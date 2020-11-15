@@ -1,0 +1,8 @@
+vario_prac : vario_practice.o
+	gcc -o vario_prac vario_practice.o
+
+vario_practice.o : vario_practice.c
+	gcc -c vario_practice.c
+
+clean :
+	rm vario_prac vario_practice.o
