@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+int main()
+{
+  int c;
+
+  printf("Input a letter:\n");
+  c = getchar();
+  printf("You typed:\n");
+  putchar(c);
+  
+  return(0);
+}
