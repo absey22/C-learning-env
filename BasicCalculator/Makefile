@@ -1,11 +1,16 @@
-vario_prac : vario_practice.o #test.o
-	gcc -o vario_prac vario_practice.o #test.o
+run_calculator : run_calculator.o test_calculator.o
+	gcc -o run_calculator run_calculator.o
+	gcc -o test_calculator test_calculator.o
+	./test_calculator
 
-vario_practice.o : vario_practice.c
-	gcc -c vario_practice.c
 
-#test.o : test.c
-#	gcc -c test.c
+run_calculator.o : run_calculator.c
+	gcc -c run_calculator.c
+
+test_calculator.o : test_calculator.c
+	gcc -c test_calculator.c
+
 
 clean :
-	rm vario_prac vario_practice.o #test.o
+	rm run_calculator run_calculator.o
+	rm test_calculator test_calculator.o
